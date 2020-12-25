@@ -1,0 +1,78 @@
+p.text:not(:empty): {
+  /*Для пустых абзацев*/
+  color: pink;
+}
+
+p.text:not(:empty)::after {
+  /*Для не пустых абзацев*/
+  content: attr(title);
+}
+
+#some_id::before {
+  content: 'Okay';
+  color: blue;
+  text-decoration: line-through;
+}
+
+p.main-link::first-letter {
+  /* Или first line - стили для первой строки*/
+  color: indigo;
+}
+
+.main-link {
+  color: turquoise;
+}
+
+.main-link:hover {
+  /*Hover срабатывает при наведении на ссылку*/
+  color: red;
+  text-decoration: underline;
+  text-decoration-color: navy;
+  cursor: pointer;
+  /*cursor: url('');- Для установки своего курсора*/
+}
+
+p {
+  text-decoration: line-through;
+  /*Не активен для текста из-за none ниже*/
+}
+
+p.main-link {
+  color: violet;
+  text-decoration: none;
+}
+
+p.main-link:hover {
+  color: purple
+}
+
+p:first-of-type {
+  /*Для первого тега "p" в списке*/
+}
+
+p:last-of-type
+
+/*Для последнего тега "p" в списке */
+.main-link:active {
+  text-decoration: line-through;
+}
+
+.main-link:visited {
+  /*Помечает уже использованную ссылку цветом*/
+  text-decoration: line-through;
+  /*line-through- может не работать*/
+  color: grey;
+}
+
+input:required {
+  /*Для обращения к классу required*/
+}
+
+input {
+  /*Итоговый цвет текста после ввода*/
+  color: blue
+}
+
+input:focus {
+  /*Focus определяет цвет текста во время введения*/
+  color: red;
